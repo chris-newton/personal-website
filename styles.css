@@ -1,0 +1,84 @@
+@font-face {
+    font-family: departure-mono;
+    src: url(./fonts/DepartureMono-Regular.woff2);
+}
+
+body {
+    font-family: Roboto;
+    height: 100vh;
+    margin:0;
+    background: linear-gradient(rgb(61, 97, 165), rgb(43, 39, 99));
+    display: flex;
+}
+
+.sidebar-container {
+    height: 100%;
+    width: 160px;
+    position: fixed;
+    border-right: 1px solid rgb(39, 39, 39);
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    gap: 10px;
+}
+
+.sidebar-link {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.sidebar-link:hover {
+    text-shadow: 0 0 5px #ffffff;
+}
+
+.main-container {
+    flex: auto;
+    width: 100%; 
+    margin-left: 160px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.speaking-to-user {
+    font-family: departure-mono;
+    font-size: 0.8rem;
+    color: rgb(34, 189, 228)
+}
+
+.hero-heavy {
+    font-size: 3rem;
+    font-weight: 500;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.hero-name {
+    color: rgb(233, 233, 233)
+}
+
+.hero-blurb {
+    color: rgb(182, 182, 182)
+}
+
+.hero-content {
+    position: relative;
+    left: -5%
+}
+
+.hero-button {
+    padding: 10px; 
+    background-color: transparent;
+    border-radius: 5px;
+    border: 1px solid white;
+}
+
+.hero-button:hover {
+    cursor: pointer;
+    background-color:rgba(124, 124, 124, 0.349);
+}
+
