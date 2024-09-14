@@ -19,6 +19,7 @@ body {
     display: flex;
 }
 
+
 button:hover {
     cursor: pointer;
 }
@@ -58,6 +59,11 @@ button:hover {
 
 .sidebar-link:hover {
     text-shadow: 0 0 5px #ffffff;
+}
+
+.sidebar-link:active {
+    color:#969595;
+    text-shadow: 0 0 5px #969595;
 }
 
 .main-container {
@@ -192,6 +198,11 @@ button:hover {
 
 .hero-button:hover {
     filter: drop-shadow(1px 1px 3px white);
+}
+
+.hero-button:active {
+    filter: brightness(60%);
+    filter: drop-shadow(1px 1px 3px #969595);
 }
 
 .go-to-about:active {
