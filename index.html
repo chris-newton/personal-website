@@ -16,6 +16,7 @@
     <body>
         <div class="sidebar-container">
             <nav class="sidebar">
+                <button class="sidebar-link hero-button" onclick="scrollToHeroSection()"></button>
                 <button class="sidebar-link" onclick="scrollToAboutSection()">About</button>
                 <button class="sidebar-link" onclick="scrollToProjectsSection()">Projects</button>
                 <button class="sidebar-link" onclick="scrollToResumeSection()">Resume</button>
@@ -30,7 +31,7 @@
                     <p class="hero-name hero-heavy">Chris Newton</p>
                     <p class="hero-blurb hero-heavy">I build web apps.</p>
 
-                    <button class="hero-button speaking-to-user">Read my resume</button> 
+                    <button class="hero-resume-button speaking-to-user">Read my resume</button> 
                 </div>
 
                 <button class="go-to-about" onClick="scrollToAboutSection()"></button>
@@ -45,13 +46,16 @@
 
             <div class="projects-section">
                 <p class="projects-description">
-                    about: my name is chris and
-                    pmy name is chris andmy name is chris andmy name is chris and
+                    There will be projects here as cards
                 </p>
             </div>
 
             <div class="resume-section">
-                <embed class="resume-pdf" src="./images/Chris_Newton_Software_Developer.pdf"  type="application/pdf">
+                <iframe class="resume-pdf" 
+                 src="./images/Chris_Newton_Software_Developer.pdf#toolbar=0"
+                 width="800" height="500">
+                </iframe>
+                <embed class="resume-pdf" src=""  type="application/pdf">
             </div>
 
             <div class="contact-section">

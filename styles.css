@@ -6,6 +6,7 @@
 * {
     box-sizing: border-box;
     color: white;
+    padding: 0px;
 }
 
 body {
@@ -14,16 +15,16 @@ body {
     margin: 0;
     padding: 0;
     border: none;
-    background: linear-gradient(rgb(61, 97, 165), rgb(43, 39, 99));
+    background: linear-gradient(rgb(6, 0, 61), rgb(3, 45, 80));
     display: flex;
 }
 
 .sidebar-container {
     height: 100vh;
-    width: 160px;
+    width: 200px;
     border-right: 1px solid rgb(117, 117, 117);
-    flex: auto;
-    flex-shrink: 0;
+    flex: none;
+    animation: slide-up 1.5s;
 }
 
 .sidebar {
@@ -35,9 +36,9 @@ body {
 }
 
 .resume-pdf {
-    width: 100%;
-    /* aspect-ratio: 4 / 3; */
-
+    width: min-content;
+    overflow-y: hidden;
+    border: none;
 }
 
 .sidebar-link {
@@ -73,8 +74,17 @@ body {
     align-items: center;
 }
 
-.about-section {
+.about-section,
+.projects-section {
     padding: 50px;
+    font-size: 30px;
+    color: white;
+}
+
+.resume-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .contact-section {
@@ -100,10 +110,10 @@ body {
     color: rgb(168, 168, 168)
 }
 
-.hero-content, .go-to-about {
+.hero-content {
     position: relative;
     left: -5%;
-    animation: slide-up 2s;
+    animation: slide-up 1.5s;
     line-height: 46px;
     margin-top: auto;
 }
@@ -120,12 +130,24 @@ body {
     }
 }
 
+@keyframes slide-down {
+    from {
+        opacity: 0;
+        bottom: 8%;
+    }
+
+    to {
+        opacity: 1;
+        bottom: 3%;
+    }
+}
+
 .hero-content > * {
     line-height: auto;
     margin: 0px;
 }
 
-.hero-button {
+.hero-resume-button {
     padding: 10px; 
     background-color: transparent;
     border-radius: 5px;
@@ -144,6 +166,14 @@ body {
     margin-top: auto;
     position: relative; 
     bottom: 3%;
+    animation: slide-down 2s;
+}
+
+.hero-button {
+    background-size: cover; 
+    background-image: url(./images/flower5-svgrepo-com.svg);
+    height: 40px;
+    width: 40px;
 }
 
 .go-to-about:active {
@@ -157,9 +187,4 @@ body {
 .hero-button:hover {
     cursor: pointer;
     background-color:rgba(124, 124, 124, 0.349);
-}
-
-.about-description {
-    font-size: 30px;
-    color: white;
 }
