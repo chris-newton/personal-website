@@ -5,30 +5,58 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
         <link rel="stylesheet" href="styles.css">
+        <script src="scripts.js"></script>        
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    
     </head>
 
     <body>
         <div class="sidebar-container">
             <nav class="sidebar">
-                <a class="sidebar-link" href="">About</a>
-                <a class="sidebar-link" href="">Projects</a>
-                <a class="sidebar-link" href="">Contact</a>
+                <button class="sidebar-link" onclick="scrollToAboutSection()">About</button>
+                <button class="sidebar-link" onclick="scrollToProjectsSection()">Projects</button>
+                <button class="sidebar-link" onclick="scrollToResumeSection()">Resume</button>
+                <button class="sidebar-link" onclick="scrollToContactSection()">Contact</button>
             </nav>
         </div>
 
         <div class="main-container">
-            <div class="hero-content">
-                <p class="speaking-to-user">Hi there! My name is</p>
-                <p class="hero-name hero-heavy">Chris Newton</p>
-                <p class="hero-blurb hero-heavy">I build web apps.</p>
+            <div class="hero-section">
+                <div class="hero-content">
+                    <p class="speaking-to-user hello">Hi there! My name is</p>
+                    <p class="hero-name hero-heavy">Chris Newton</p>
+                    <p class="hero-blurb hero-heavy">I build web apps.</p>
 
-                <button class="hero-button speaking-to-user">Read my resume</button> 
+                    <button class="hero-button speaking-to-user">Read my resume</button> 
+                </div>
+
+                <button class="go-to-about" onClick="scrollToAboutSection()"></button>
             </div>
-        </div>
-    </body>
+            
+            <div class="about-section">
+                <p class="about-description">
+                    about: my name is chris and
+                    pmy name is chris andmy name is chris andmy name is chris and
+                </p>
+            </div>
 
+            <div class="projects-section">
+                <p class="projects-description">
+                    about: my name is chris and
+                    pmy name is chris andmy name is chris andmy name is chris and
+                </p>
+            </div>
+
+            <div class="resume-section">
+                <embed class="resume-pdf" src="./images/Chris_Newton_Software_Developer.pdf"  type="application/pdf">
+            </div>
+
+            <div class="contact-section">
+                <h1>Contact Me</h1>
+            </div>
+
+        </body>
 </html>
